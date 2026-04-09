@@ -1,5 +1,5 @@
 module "webserver_cluster" {
-  source = "../../../../modules/services/webserver-cluster"
+  source = "https://github.com/Rotich94/First-release-of-webserver-cluster-module?ref=v0.0.1"
   
   cluster_name  = "webservers-production"
   instance_type = "t2.medium"

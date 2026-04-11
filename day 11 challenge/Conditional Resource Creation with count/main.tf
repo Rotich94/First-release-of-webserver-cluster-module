@@ -16,7 +16,7 @@ resource "aws_route53_record" "alb" {
   count = var.create_dns_record ? 1 : 0
 
   zone_id = data.aws_route53_zone.primary.zone_id
-  name    = var.domain_name
+  name    = var.create_dns_record ? var.domain_name : ""
   type    = "A"
 
   alias {
